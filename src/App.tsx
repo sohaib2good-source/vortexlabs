@@ -278,7 +278,7 @@ export default function App() {
 
                       {/* Name & Desc */}
                       <div className="flex-1 max-w-2xl">
-                        <h3 className="font-sans text-2xl md:text-3xl font-medium tracking-tight mb-2 group-hover:text-primary transition-colors">{v.name}</h3>
+                        <h3 className="font-sans text-2xl md:text-3xl font-medium tracking-tight mb-2 text-primary transition-colors">{v.name}</h3>
                         <p className="text-muted-foreground">{v.desc}</p>
                       </div>
 
@@ -306,9 +306,9 @@ export default function App() {
                               href={proj.url} 
                               target="_blank" 
                               rel="noopener noreferrer"
-                              className="font-sans text-lg text-muted-foreground hover:text-foreground transition-colors flex items-center gap-3 w-fit group/link"
+                              className="font-sans text-lg text-primary hover:text-primary/80 transition-colors flex items-center gap-3 w-fit group/link"
                             >
-                              <span className="w-1.5 h-1.5 bg-white/20 rounded-full group-hover/link:bg-primary group-hover/link:scale-125 transition-all"></span>
+                              <span className="w-1.5 h-1.5 bg-primary rounded-full group-hover/link:scale-125 transition-all"></span>
                               {proj.name}
                             </a>
                             {proj.desc && (
