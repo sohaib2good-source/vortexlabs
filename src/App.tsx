@@ -40,6 +40,11 @@ const VENTURES_LIST: Venture[] = [
         name: 'Ocean Yacht Registration', 
         url: 'https://oceanyachtregistration.com/',
         desc: 'A streamlined web application that collects client registration details and automatically delivers the submissions via email.'
+      },
+      {
+        name: 'Collexis',
+        url: 'https://collexis.shop',
+        desc: 'A platform where enthusiasts can showcase their collections, list items for sale, and start discussions. Primarily features shoes, diecast cars, and watches.'
       }
     ]
   },
