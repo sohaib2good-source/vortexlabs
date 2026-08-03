@@ -45,6 +45,11 @@ const VENTURES_LIST: Venture[] = [
         name: 'Collexis',
         url: 'https://collexis.shop',
         desc: 'A platform where enthusiasts can showcase their collections, list items for sale, and start discussions. Primarily features shoes, diecast cars, and watches.'
+      },
+      {
+        name: 'Himalayan Heritage',
+        url: 'https://himalayanheritage.company',
+        desc: 'A website built for displaying items and products posted directly by customers.'
       }
     ]
   },
@@ -440,7 +445,7 @@ export default function App() {
                 { q: 'What services does Vortex Labs offer?', a: 'We offer end-to-end cinematic video production, premium website design and engineering, and native mobile/web app development. Each service is handled by its dedicated venture under the Vortex Labs umbrella.' },
                 { q: 'How does the multi-venture model work?', a: 'Instead of operating as a monolithic agency where resources are shared haphazardly, each venture is a self-contained team of specialists. They share the same high standards and administrative backbone but execute only in their chosen medium.' },
                 { q: 'Who are Vortex Labs\' typical clients?', a: 'We work with a spectrum of clients from ambitious, well-funded startups to established Fortune 500 enterprises. We select our projects based on creative alignment, technical complexity, and mutual ambition.' },
-                { q: 'How can I start a project with Vortex Labs?', a: 'You can initiate a discussion via hello@vortexlabs.co. We will quickly assess your needs and route you to the appropriate venture leader for a discovery call.' },
+                { q: 'How can I start a project with Vortex Labs?', a: 'You can initiate a discussion via info@vortexlabsworld.com. We will quickly assess your needs and route you to the appropriate venture leader for a discovery call.' },
                 { q: 'Does Vortex Labs take on international projects?', a: 'Yes. While we are headquartered centrally, our ventures operate globally, serving clients across North America, Europe, and Asia.' }
               ].map((faq, i) => (
                 <FadeIn key={i} delay={0.1}>
@@ -477,8 +482,8 @@ export default function App() {
                   Start a Project
                 </button>
                 <div className="h-px w-10 bg-white/10 sm:h-10 sm:w-px"></div>
-                <a href="mailto:hello@vortexlabs.co" className="font-mono text-lg text-foreground hover:text-primary transition-colors relative group">
-                  hello@vortexlabs.co
+                <a href="mailto:info@vortexlabsworld.com" className="font-mono text-lg text-foreground hover:text-primary transition-colors relative group">
+                  info@vortexlabsworld.com
                   <span className="absolute -bottom-2 left-0 w-0 h-[1px] bg-primary transition-all duration-300 group-hover:w-full"></span>
                 </a>
               </div>
