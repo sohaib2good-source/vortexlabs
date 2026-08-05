@@ -49,7 +49,7 @@ const VENTURES_LIST: Venture[] = [
       {
         name: 'Himalayan Heritage',
         url: 'https://himalayanheritage.company',
-        desc: 'A website built for displaying items and products posted directly by customers.'
+        desc: 'Designed and developed a feature-rich marketplace website that empowers customers to publish, edit, and manage their own product listings while providing buyers with a seamless browsing experience.'
       }
     ]
   },
@@ -222,9 +222,6 @@ export default function App() {
               >
                 <a href="#ventures" className="bg-primary text-background px-8 py-4 rounded-full text-sm font-semibold tracking-wide uppercase hover:bg-primary/90 transition-colors">
                   Explore Ventures
-                </a>
-                <a href="#work" className="text-foreground px-8 py-4 rounded-full text-sm font-medium tracking-wide uppercase hover:bg-white/5 border border-white/10 transition-colors">
-                  View Credentials
                 </a>
               </motion.div>
             </div>
