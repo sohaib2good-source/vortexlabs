@@ -144,8 +144,7 @@ export default function App() {
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-[#080808]/80 backdrop-blur-md border-b border-white/[0.06]' : 'bg-transparent'}`}>
         <div className="max-w-[1400px] mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-1">
-            <span className="font-sans font-bold tracking-tight text-xl uppercase">Vortex</span>
-            <span className="font-sans font-light text-xl uppercase text-foreground/70">Labs</span>
+            <img src="/logo-b.png" alt="Vortex Labs" className="h-12 w-auto object-contain" />
           </div>
 
           <div className="hidden md:flex items-center gap-8">
