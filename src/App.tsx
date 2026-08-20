@@ -1,5 +1,7 @@
 import React, { useEffect, useState, ReactNode } from 'react';
 import { motion, useScroll, useTransform, useMotionValue, useSpring } from 'motion/react';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import EcostepPrivacyPolicy from './pages/EcostepPrivacyPolicy';
 import {
   ArrowUpRight,
   PenTool,
@@ -25,19 +27,19 @@ const FadeIn = ({ children, delay = 0, className = "" }: { children: ReactNode, 
   </motion.div>
 );
 
-type Project = { name: string; url: string; desc?: string; };
+type Project = { name: string; url: string; desc?: ReactNode; };
 type Venture = { num: string; name: string; desc: string; tags: string[]; projects?: Project[]; };
 
 const VENTURES_LIST: Venture[] = [
   { num: '01', name: 'VORTEX PICTURES', desc: 'Cinematic video for brands and IP.', tags: ['Film', 'Brand', 'Doc'] },
-  { 
-    num: '02', 
-    name: 'VORTEX WEB', 
-    desc: 'Websites that lead industries.', 
-    tags: ['Design', 'Dev', 'CMS'], 
+  {
+    num: '02',
+    name: 'VORTEX WEB',
+    desc: 'Websites that lead industries.',
+    tags: ['Design', 'Dev', 'CMS'],
     projects: [
-      { 
-        name: 'Ocean Yacht Registration', 
+      {
+        name: 'Ocean Yacht Registration',
         url: 'https://oceanyachtregistration.com/',
         desc: 'A streamlined web application that collects client registration details and automatically delivers the submissions via email.'
       },
@@ -53,16 +55,27 @@ const VENTURES_LIST: Venture[] = [
       }
     ]
   },
-  { 
-    num: '03', 
-    name: 'VORTEX APPS', 
-    desc: 'Products that earn retention.', 
+  {
+    num: '03',
+    name: 'VORTEX APPS',
+    desc: 'Products that earn retention.',
     tags: ['iOS', 'Android', 'SaaS'],
     projects: [
       {
         name: 'POS Vortex',
         url: 'https://posvortex.com/',
         desc: 'A robust POS system tailored for small to medium-sized restaurants and retail stores to easily manage inventory and kitchen operations.'
+      },
+      {
+        name: 'Eco Step',
+        url: '#',
+        desc: (
+          <>
+            This Android app helps users build better daily habits while making a positive impact on the environment. Users can set simple goals such as saving water, reducing food waste, and using resources more responsibly. Track your progress, stay motivated, and turn small everyday actions into meaningful habits. Together, these small changes can help reduce your carbon footprint and create a cleaner, more sustainable future.
+            <br />
+            <Link to="/ecostep-privacy-policy" className="underline hover:text-primary">Privacy Policy</Link>
+          </>
+        )
       }
     ]
   }
@@ -126,7 +139,7 @@ const CustomCursor = () => {
   );
 };
 
-export default function App() {
+function HomePage() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -303,9 +316,9 @@ export default function App() {
                       <div className="px-6 pb-12 md:pl-[88px] flex flex-col gap-6">
                         {v.projects.map((proj, pIdx) => (
                           <div key={pIdx} className="flex flex-col gap-3">
-                            <a 
-                              href={proj.url} 
-                              target="_blank" 
+                            <a
+                              href={proj.url}
+                              target="_blank"
                               rel="noopener noreferrer"
                               className="font-sans text-lg text-primary hover:text-primary/80 transition-colors flex items-center gap-3 w-fit group/link"
                             >
@@ -534,5 +547,16 @@ export default function App() {
         </div>
       </footer>
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/ecostep-privacy-policy" element={<EcostepPrivacyPolicy />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
