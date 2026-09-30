@@ -8,15 +8,13 @@ const copyHtmlPlugin = () => {
   return {
     name: 'copy-html-plugin',
     closeBundle() {
-      const dir = path.resolve(__dirname, 'dist/ecostep-privacy-policy');
-      if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true });
-      }
+      // Copy index.html to ecostep-privacy-policy.html to support clean URLs on GitHub Pages
+      // without needing a trailing slash or directory redirect.
       fs.copyFileSync(
         path.resolve(__dirname, 'dist/index.html'),
-        path.join(dir, 'index.html')
+        path.resolve(__dirname, 'dist/ecostep-privacy-policy.html')
       );
-      console.log('Copied index.html to dist/ecostep-privacy-policy/index.html');
+      console.log('Copied index.html to dist/ecostep-privacy-policy.html');
     }
   };
 };
